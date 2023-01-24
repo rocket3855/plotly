@@ -169,13 +169,13 @@ function buildCharts(sample) {
      // 1. Create a variable that filters the metadata array for the object with the desired sample number.
      var metadata = data.metadata;
      // Filter the data for the object with the desired sample number
-     var mArray = metadata.filter((sampleObj) => sampleObj.id == sample);
+     let rArray = metadata.filter((sampleObj) => sampleObj.id == sample);
  
      // Create a variable that holds the first sample in the array.
      // Use the 'result' variable that was set in D1.
  
      // 2. Create a variable that holds the first sample in the metadata array.
-     var metadata = mArray[0];
+     var metadata =rArray[0];
  
      // Create variables that hold the otu_ids, otu_labels, and sample_values.
      // Use the variables that were reset in D2 to hold all the sample data for the first volunteer.
@@ -192,9 +192,7 @@ function buildCharts(sample) {
        value: wfrequency,
        type: 'indicator',
        mode: 'gauge+number',
-       title: {
-         text: '<b>washed belly buttons per week</b><br>',
-       },
+       title: { text: '<b>washed belly buttons per week</b><br>'},
        gauge: {
          axis: { range: [null, 10], tickcolor: 'black' },
          bar: { color: 'black' },
