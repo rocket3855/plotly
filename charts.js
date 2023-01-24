@@ -190,20 +190,25 @@ function buildCharts(sample) {
      // 4. Create the trace for the gauge chart.
      var guageTrace = {
        value: wfrequency,
+       title: { text: '<b>washed belly buttons per week</b><br>'},
        type: 'indicator',
        mode: 'gauge+number',
-       title: { text: '<b>washed belly buttons per week</b><br>'},
        gauge: {
          axis: { range: [null, 10], tickcolor: 'black' },
-         bar: { color: 'black' },
-         bordercolor: 'black',
          steps: [
-           { range: [0, 2], color: 'green' },
-           { range: [2, 4], color: 'darkgreen' },
-           { range: [4, 6], color: 'yellow' },
-           { range: [6, 8], color: 'orange' },
-           { range: [8, 10], color: 'red' },
-         ],
+          { range: [0, 2], color: 'green' },
+          { range: [2, 4], color: 'darkgreen' },
+          { range: [4, 6], color: 'yellow' },
+          { range: [6, 8], color: 'orange' },
+          { range: [8, 10], color: 'red' },
+          ],
+         bordercolor: 'black',
+         threshold: {
+          line: {color: "red", width: 4},
+          thickness: 0.75,
+          value: 10
+         }
+         
        },
      };
  
