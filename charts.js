@@ -191,7 +191,7 @@ function buildCharts(sample) {
      var guageTrace = {
        value: wfrequency,
        title: { text: '<b>washed belly buttons per week</b><br>'},
-       type: 'indicator',
+       type: 'guage',
        mode: 'gauge+number',
        gauge: {
          axis: { range: [null, 10], tickcolor: 'black' },
